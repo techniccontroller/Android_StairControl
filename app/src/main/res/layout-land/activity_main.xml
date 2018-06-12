@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TableLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="STOP"
+            android:id="@+id/btnStop"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/btnRechts"
+            android:layout_toStartOf="@+id/btnRechts"
+            android:layout_alignTop="@+id/btnHochHinten" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="VOR"
+            android:id="@+id/btnVor"
+            android:layout_above="@+id/btnStop"
+            android:layout_toLeftOf="@+id/btnRechts"
+            android:layout_toStartOf="@+id/btnRechts" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="LINKS"
+            android:id="@+id/btnLinks"
+            android:layout_alignTop="@+id/btnStop"
+            android:layout_toLeftOf="@+id/btnStop"
+            android:layout_toStartOf="@+id/btnStop"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="RECHTS"
+            android:id="@+id/btnRechts"
+            android:layout_alignEnd="@+id/btnStart"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/btnStop"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ZURÜCK"
+            android:id="@+id/btnZur"
+            android:layout_toStartOf="@+id/btnRechts"
+            android:layout_below="@+id/btnStop" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="HOCH"
+            android:id="@+id/btnHochVorne"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/lblHinten"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lblVorne" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="RUNTER"
+            android:id="@+id/btnRunterVorne"
+            android:layout_below="@+id/btnHochVorne"
+            android:layout_toLeftOf="@+id/btnHochHinten"
+            android:layout_toStartOf="@+id/btnHochHinten" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="HOCH"
+            android:id="@+id/btnHochHinten"
+            android:layout_alignTop="@+id/btnHochVorne"
+            android:layout_toRightOf="@+id/btnHochVorne"
+            android:layout_toEndOf="@+id/btnHochVorne"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="RUNTER"
+            android:id="@+id/btnRunterHinten"
+            android:layout_below="@+id/btnHochHinten"
+            android:layout_alignLeft="@+id/btnHochHinten"
+            android:layout_alignStart="@+id/btnHochHinten" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Räder vorne:"
+            android:id="@+id/lblVorne"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Räder hinten:"
+            android:id="@+id/lblHinten"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="28dp"
+            android:layout_alignBaseline="@+id/lblVorne"
+            android:layout_alignBottom="@+id/lblVorne"
+            android:layout_toRightOf="@+id/lblVorne"
+            android:layout_toEndOf="@+id/lblVorne" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Startposition"
+            android:id="@+id/btnStartPos"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="startposition" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:id="@+id/btnStart"
+            android:layout_alignTop="@+id/btnStartPos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="start"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/text_uuid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="UUID"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/lblVorne"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="MAC Adresse des Bluetooth Devices:"
+            android:id="@+id/textView"
+            android:layout_below="@+id/text_uuid"
+            android:layout_alignStart="@+id/lblVorne"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/text_adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="00:16:53:19:FF:B2"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/bt_verbinden"
+            android:layout_toStartOf="@+id/bt_verbinden"
+            android:layout_marginLeft="10dp">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/bt_verbinden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:onClick="verbinden"
+            android:text="Verbinden"
+            android:layout_toLeftOf="@+id/bt_trennen"
+            android:layout_toStartOf="@+id/bt_trennen"
+            android:layout_alignBottom="@+id/text_adresse"><requestFocus /></Button>
+
+        <Button
+            android:id="@+id/bt_trennen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="trennen"
+            android:text="Trennen"
+            android:layout_alignTop="@+id/bt_verbinden"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Steuerung:"
+            android:layout_below="@+id/text_adresse"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView2"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>

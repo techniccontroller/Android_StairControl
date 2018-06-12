@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StairControl</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="startposition">Wo befinden sich die hinteren Räder?</string>
+    <string-array name="startposition_array">
+        <item>OBEN</item>
+        <item>MITTE</item>
+        <item>UNTEN</item>
+    </string-array>
+
+</resources>

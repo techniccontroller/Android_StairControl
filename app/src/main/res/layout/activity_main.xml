@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TableLayout>
+
+    <TextView
+        android:id="@+id/text_uuid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="UUID" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="MAC Adresse des Bluetooth Devices:"
+        android:textSize="15dp"
+        android:textIsSelectable="false" />
+
+    <EditText
+        android:id="@+id/text_adresse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="00:16:53:19:FF:B2">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_verbinden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:onClick="verbinden"
+        android:text="Verbinden"
+        android:layout_marginLeft="10dp"><requestFocus /></Button>
+
+    <Button
+        android:id="@+id/bt_trennen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="trennen"
+        android:text="Trennen"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Steuerung:"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="STOP"
+            android:id="@+id/btnStop"
+            android:layout_below="@+id/btnVor"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="VOR"
+            android:id="@+id/btnVor"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/btnStop"
+            android:layout_alignStart="@+id/btnStop" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="LINKS"
+            android:id="@+id/btnLinks"
+            android:layout_alignTop="@+id/btnStop"
+            android:layout_toLeftOf="@+id/btnStop"
+            android:layout_toStartOf="@+id/btnStop"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="RECHTS"
+            android:id="@+id/btnRechts"
+            android:layout_alignTop="@+id/btnStop"
+            android:layout_toRightOf="@+id/btnStop"
+            android:layout_toEndOf="@+id/btnStop"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ZURÜCK"
+            android:id="@+id/btnZur"
+            android:layout_below="@+id/btnStop"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="HOCH"
+            android:id="@+id/btnHochVorne"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lblHinten"
+            android:layout_toEndOf="@+id/lblHinten"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="RUNTER"
+            android:id="@+id/btnRunterVorne"
+            android:layout_alignTop="@+id/btnHochVorne"
+            android:layout_toRightOf="@+id/btnHochVorne"
+            android:layout_toEndOf="@+id/btnHochVorne"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="HOCH"
+            android:id="@+id/btnHochHinten"
+            android:layout_below="@+id/btnHochVorne"
+            android:layout_alignLeft="@+id/btnHochVorne"
+            android:layout_alignStart="@+id/btnHochVorne" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="RUNTER"
+            android:id="@+id/btnRunterHinten"
+            android:layout_below="@+id/btnHochVorne"
+            android:layout_toRightOf="@+id/btnHochHinten"
+            android:layout_toEndOf="@+id/btnHochHinten"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Räder vorne:"
+            android:id="@+id/lblVorne"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Räder hinten:"
+            android:id="@+id/lblHinten"
+            android:layout_alignLeft="@+id/lblVorne"
+            android:layout_alignStart="@+id/lblVorne"
+            android:layout_alignBaseline="@+id/btnHochHinten" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Startposition"
+            android:id="@+id/btnStartPos"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="startposition" />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:id="@+id/btnStart"
+            android:layout_alignTop="@+id/btnStartPos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="start"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+</LinearLayout>
